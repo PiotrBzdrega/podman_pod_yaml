@@ -1,3 +1,0 @@
-/home/piotrbz/DockerfileHelloWorld/build/CMakeFiles/hello_world.dir
-/home/piotrbz/DockerfileHelloWorld/build/CMakeFiles/edit_cache.dir
-/home/piotrbz/DockerfileHelloWorld/build/CMakeFiles/rebuild_cache.dir
