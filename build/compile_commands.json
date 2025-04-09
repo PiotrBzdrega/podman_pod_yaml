@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/piotrbz/DockerfileHelloWorld/build",
+  "command": "/usr/bin/g++   -g -std=c++23 -o CMakeFiles/hello_world.dir/main.cpp.o -c /home/piotrbz/DockerfileHelloWorld/main.cpp",
+  "file": "/home/piotrbz/DockerfileHelloWorld/main.cpp",
+  "output": "CMakeFiles/hello_world.dir/main.cpp.o"
+}
+]
