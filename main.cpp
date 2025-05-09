@@ -5,7 +5,8 @@
 #include <filesystem>
 #include <fstream>
 
-constexpr auto filePath = "/config/cfg.json";
+constexpr auto jsonPath = "/config/cfg.json";
+constexpr auto keyPath = "/platform/platform_ecdsa_public.pem";
 
 
 std::string read_file(std::string_view file_path)
@@ -64,17 +65,20 @@ int main(int argLen, char** arg)
         std::println("{}",env);
     }
 
+    std::println("platform key");
+    std::println("{}",read_file(keyPath));
+
     if (auto env = std::getenv("PASSWORD"))
     {
         std::println("{}",env);
     }
 
     std::println("json File");
-    std::println("{}",read_file(filePath));
+    std::println("{}",read_file(jsonPath));
 
     std::println("append to File");
-    append(filePath,"\nadamek");
+    append(jsonPath,"\nadamek");
 
     std::println("read appended");
-    std::println("{}",read_file(filePath));
+    std::println("{}",read_file(jsonPath));
 }
