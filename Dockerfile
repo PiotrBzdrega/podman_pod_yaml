@@ -2,6 +2,8 @@
 # podman run --rm hello-static --noTLS
 FROM scratch
 
+COPY tocopy/cfg /default_config/cfg
+
 # Copy the compiled binary
 COPY build/hello_world /hello_world
 

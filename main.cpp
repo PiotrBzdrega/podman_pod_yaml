@@ -5,7 +5,8 @@
 #include <filesystem>
 #include <fstream>
 
-constexpr auto jsonPath = "/config/cfg.json";
+constexpr auto jsonPath = "/config/startup.json";
+constexpr auto configPath = "/default_config/cfg";
 constexpr auto keyPath = "/platform/platform_ecdsa_public.pem";
 
 
@@ -73,12 +74,27 @@ int main(int argLen, char** arg)
         std::println("{}",env);
     }
 
-    std::println("json File");
-    std::println("{}",read_file(jsonPath));
+    {
+        std::println("json File");
+        std::println("{}",read_file(jsonPath));
 
-    std::println("append to File");
-    append(jsonPath,"\nadamek");
+        std::println("append to File");
+        append(jsonPath,"\nadamek");
 
-    std::println("read appended");
-    std::println("{}",read_file(jsonPath));
+        std::println("read appended");
+        std::println("{}",read_file(jsonPath));
+    }
+
+    {
+        std::println("cfg file");
+        std::println("{}",read_file(configPath));
+        
+        std::println("append to cfg file");
+        append(configPath,"\t i will :_) ");
+        
+        std::println("read appended cfg file");
+        std::println("{}",read_file(configPath));
+    }
+
+
 }
